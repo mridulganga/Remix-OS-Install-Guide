@@ -8,16 +8,18 @@ To begin with, you should have the Remix OS ISO File which is freely available f
 1. Create a folder **'remix'** in **/**
 2. Copy contents of the **ISO** into **/remix/**
 3. Install **squashfs-tools** if not present
-  ```bash 
+  ```
   sudo apt-get install squashfs-tools
   ```
 4. Extract **system.img** from **system.sfs** into **/remix/**
 5. Open GRUB custom entries File
-  `gksudo gedit /etc/grub.d/40_custom`
-  `gksu xed /etc/grub.d/40_custom`
-  `sudo nano /etc/grub.d/40_custom`
+  ```
+  gksudo gedit /etc/grub.d/40_custom
+  gksu xed /etc/grub.d/40_custom
+  sudo nano /etc/grub.d/40_custom
+  ```
 6. Use any of the above methods to edit the entry and add the following lines at the end:
-  ```bash
+  ```
   menuentry 'Remix OS' --class android-x86 {
         insmod part_gpt
         search --file --no-floppy --set=root /remix/system.img
@@ -26,7 +28,9 @@ To begin with, you should have the Remix OS ISO File which is freely available f
   }
   ```
 7. Run command
-  `sudo update-grub`
+  ```
+  sudo update-grub
+  ```
 8. Restart and select **Remix OS** from the Grub Menu
 
 
