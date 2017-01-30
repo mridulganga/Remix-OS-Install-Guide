@@ -24,9 +24,7 @@ To begin with, you should have the Remix OS ISO File which is freely available f
         insmod part_gpt
         search --file --no-floppy --set=root /remix/system.img
         linux /remix/kernel root=/dev/ram0 androidboot.hardware=remix_x86_64 androidboot.selinux=permissive CMDLINE
-        initrd /remix/initrd.img
-  }
-  </code>
+        initrd /remix/initrd.img }</code>
   </pre>
 7. Run command
   <br>
