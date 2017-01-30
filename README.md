@@ -14,17 +14,13 @@ To begin with, you should have the Remix OS ISO File which is freely available f
   ```
 4. Extract **system.img** from **system.sfs** into **/remix/**
 5. Open GRUB custom entries File
-  <br>
-  <pre><code>
-  gksudo gedit /etc/grub.d/40_custom
+  <pre><code>gksudo gedit /etc/grub.d/40_custom
   gksu xed /etc/grub.d/40_custom
   sudo nano /etc/grub.d/40_custom
   </code></pre>
 6. Use any of the above methods to edit the entry and add the following lines at the end:
-  <br>
   <pre>
-  <code>
-  menuentry 'Remix OS' --class android-x86 {
+  <code>menuentry 'Remix OS' --class android-x86 {
         insmod part_gpt
         search --file --no-floppy --set=root /remix/system.img
         linux /remix/kernel root=/dev/ram0 androidboot.hardware=remix_x86_64 androidboot.selinux=permissive CMDLINE
@@ -45,10 +41,9 @@ To begin with, you should have the Remix OS ISO File which is freely available f
 2. Extract all the files from the **ISO** and place it in the partition
 3. Install and Open [**EasyBCD 2.3**](http://neosmart.net/EasyBCD/) (Please Register to get the free download.)
 4. Go to **Add Entry > ISO**
-   <br>
-  `Path : Select ISO Image`
-  `Name : Remix OS`
-  `Mode : Run from Disk`
+  <pre><code>Path : Select ISO Image
+  Name : Remix OS
+  Mode : Run from Disk</code></pre>
 5. Click on **Add entry**
 6. **Tools > Restart**
 7. Select **Remix OS** in Boot Screen
