@@ -1,6 +1,9 @@
 # Remix-OS-Install-Guide
 Install Remix OS on Linux and Windows Machines
 
+![The Settings view](https://www1-lw.xda-cdn.com/files/2016/01/settings.png)
+This is how it looks
+
 To begin with, you should have the Remix OS ISO File which is freely available from their website.
 [Their Website](http://www.jide.com/remixos)
 
